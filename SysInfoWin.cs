@@ -55,8 +55,10 @@ class SysInfoWin
 
         if (result == 0)
         {
+            if (versionInfo.dwMajorVersion == 10 && versionInfo.dwBuildNumber >= 22000)
+                Console.WriteLine("OS: Windows 11");
             if (versionInfo.dwMajorVersion == 10)
-                Console.WriteLine("OS: Windows 10 or Greater");
+                Console.WriteLine("OS: Windows 10");
             else if (versionInfo.dwMajorVersion == 6 && versionInfo.dwMinorVersion == 3)
                 Console.WriteLine("OS: Windows 8.1");
             else if (versionInfo.dwMajorVersion == 6 && versionInfo.dwMinorVersion == 2)
