@@ -42,7 +42,7 @@ def PrintMemoryInfo():
 
         print(f"RAM: {freeMem} MB free / {totalMem} MB total")
         print(f"Swap: {swapFree} MB free / {swapTotal} MB total")
-        print(f"Virtual memory: {virtualMem//1024} MB")
+        print(f"Virtual memory: {virtualMem} MB")
     except:
         print("RAM: Unknown")
         print("Swap: Unknown")
