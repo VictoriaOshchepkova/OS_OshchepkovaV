@@ -39,17 +39,14 @@ def fill_file(fd, size, page_size):
     for i in range(page_size):
         chunk[i] = (random.getrandbits(8) or 1)
 
-    written = 0
-    while written < size:
-        to_write = min(page_size, size - written)
-        n = os.write(fd, chunk[:to_write])
-        written += n
+    for _ in range(size // page_size):
+        os.write(fd, chunk)
     os.fsync(fd)
 
 def run(full, num_run):
     page_size = os.sysconf('SC_PAGE_SIZE')
     half_size = FILE_SIZE // 2
-
+    
     fd, path = tempfile.mkstemp()
     try:
         os.ftruncate(fd, FILE_SIZE)
