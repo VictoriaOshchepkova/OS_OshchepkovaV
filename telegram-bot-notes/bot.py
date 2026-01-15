@@ -144,7 +144,6 @@ async def cmd_delete(msg: types.Message) -> None:
     conn = psycopg2.connect(DATABASE_URL)
     cursor = conn.cursor()
     
-    # Проверяем, принадлежит ли заметка пользователю
     cursor.execute(
         "SELECT id FROM notes WHERE id = %s AND user_id = %s",
         (note_id, user_id)
