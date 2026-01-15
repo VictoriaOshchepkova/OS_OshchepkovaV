@@ -65,12 +65,12 @@
 
 ## 📁 Структура проекта
 
-notes/
-├── bot.py                 # Основной код бота
-├── config.py              # Чтение переменных окружения
-├── requirements.txt       # Зависимости
-├── init.sql               # Инициализация таблицы в PostgreSQL
-├── Dockerfile             # Сборка образа бота
-├── docker-compose.yml     # Оркестрация: бот + PostgreSQL
-├── .env.example           # Пример файла с переменными
+notes/\
+├── bot.py                 # Основной код бота\
+├── config.py              # Чтение переменных окружения\
+├── requirements.txt       # Зависимости\
+├── init.sql               # Инициализация таблицы в PostgreSQL\
+├── Dockerfile             # Сборка образа бота\
+├── docker-compose.yml     # Оркестрация: бот + PostgreSQL\
+├── .env.example           # Пример файла с переменными\
 └── .gitignore             # Исключает .env и временные файлы
